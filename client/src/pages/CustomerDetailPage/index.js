@@ -57,7 +57,10 @@ class CustomerDetailPage extends Component {
     if (window.confirm('Are you sure you want to delete this customer?')) {
       try {
         await axios.delete(`https://customer-management-app-4poq.onrender.com/api/customers/${this.props.match.params.id}`);
-        this.props.history.push('/');
+        this.props.history.push({
+          pathname: '/',
+          state: { deletedId: this.props.match.params.id }
+      })
       } catch {
         alert('Failed to delete customer');
       }
