@@ -24,7 +24,7 @@ class CustomerFormPage extends Component{
     fetchCustomer = async () => {
         const {id} = this.state
         try{
-            const response = await axios.get(`http://localhost:5000/api/customers/${id}`)
+            const response = await axios.get(`https://customer-management-app-4poq.onrender.com/api/customers/${id}`)
 
             const {
                 first_name: firstName,
@@ -49,9 +49,9 @@ class CustomerFormPage extends Component{
         this.setState({isLoading: true})
         try{
             if(id){
-                await axios.put(`http://localhost:5000/api/customers/${id}`, customerData)
+                await axios.put(`https://customer-management-app-4poq.onrender.com/api/customers/${id}`, customerData)
             } else {
-                 await axios.post('http://localhost:5000/api/customers', customerData)
+                 await axios.post('https://customer-management-app-4poq.onrender.com/api/customers', customerData)
             }
             this.props.history.push('/')
         } catch(e){

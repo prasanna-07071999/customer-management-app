@@ -20,8 +20,8 @@ class CustomerDetailPage extends Component {
     const id = this.props.match.params.id;
     this.setState({ isLoading: true });
     try {
-      const customerResponse = await axios.get(`http://localhost:5000/api/customers/${id}`);
-      const addressesResponse = await axios.get(`http://localhost:5000/api/customers/${id}/addresses`);
+      const customerResponse = await axios.get(`https://customer-management-app-4poq.onrender.com/api/customers/${id}`);
+      const addressesResponse = await axios.get(`https://customer-management-app-4poq.onrender.com/api/customers/${id}/addresses`);
       const customerData = customerResponse.data;
       const customer = {
         id: customerData.id,
@@ -56,7 +56,7 @@ class CustomerDetailPage extends Component {
   handleDeleteCustomer = async () => {
     if (window.confirm('Are you sure you want to delete this customer?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/customers/${this.props.match.params.id}`);
+        await axios.delete(`https://customer-management-app-4poq.onrender.com/api/customers/${this.props.match.params.id}`);
         this.props.history.push('/');
       } catch {
         alert('Failed to delete customer');

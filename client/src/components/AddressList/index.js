@@ -12,7 +12,7 @@ class AddressList extends Component {
   refreshAddresses = async () => {
     const { customerId, setAddresses } = this.props;
     try {
-      const response = await axios.get(`http://localhost:5000/api/customers/${customerId}/addresses`);
+      const response = await axios.get(`https://customer-management-app-4poq.onrender.com/api/customers/${customerId}/addresses`);
       let data = response.data;
 
       const normalized = data.addressesArray.map(addr => ({
@@ -39,7 +39,7 @@ class AddressList extends Component {
 
 handleDeleteClick = async (addressId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/addresses/${addressId}`);
+      await axios.delete(`https://customer-management-app-4poq.onrender.com/api/addresses/${addressId}`);
       await this.updatedAddresses(addressId);
     } catch (error) {
       alert('Failed to delete address');

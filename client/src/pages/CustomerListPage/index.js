@@ -22,7 +22,7 @@ class CustomerListPage extends Component {
   fetchCustomers = async () => {
     this.setState({ isLoading: true, error: null });
     try {
-        const response = await axios.get('http://localhost:5000/api/customers');
+        const response = await axios.get('https://customer-management-app-4poq.onrender.com/api/customers');
         const updatedData = response.data.data.map((eachCustomer) => ({
           id: eachCustomer.id,
           firstName: eachCustomer.first_name,
