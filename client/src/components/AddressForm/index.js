@@ -74,12 +74,12 @@ class AddressForm extends React.Component {
     let response;
     if (address && address.id) {
       response = await axios.put(
-        `https://customer-management-app-4poq.onrender.com/api/addresses/${address.id}`,
+        `https://customer-management-backend-73do.onrender.com/api/addresses/${address.id}`,
         data
       );
     } else {
       response = await axios.post(
-        `https://customer-management-app-4poq.onrender.com/api/customers/${customerId}/addresses`,
+        `https://customer-management-backend-73do.onrender.com/api/customers/${customerId}/addresses`,
         data
       );
     }

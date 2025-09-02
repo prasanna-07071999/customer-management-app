@@ -20,8 +20,8 @@ class CustomerDetailPage extends Component {
     const id = this.props.match.params.id;
     this.setState({ isLoading: true });
     try {
-      const customerResponse = await axios.get(`https://customer-management-app-4poq.onrender.com/api/customers/${id}`);
-      const addressesResponse = await axios.get(`https://customer-management-app-4poq.onrender.com/api/customers/${id}/addresses`);
+      const customerResponse = await axios.get(`https://customer-management-backend-73do.onrender.com/api/customers/${id}`);
+      const addressesResponse = await axios.get(`https://customer-management-backend-73do.onrender.com/api/customers/${id}/addresses`);
       const customerData = customerResponse.data;
       const customer = {
         id: customerData.id,

@@ -49,9 +49,9 @@ class CustomerFormPage extends Component{
         this.setState({isLoading: true})
         try{
             if(id){
-                await axios.put(`https://customer-management-app-4poq.onrender.com/api/customers/${id}`, customerData)
+                await axios.put(`https://customer-management-backend-73do.onrender.com/api/customers/${id}`, customerData)
             } else {
-                 await axios.post('https://customer-management-app-4poq.onrender.com/api/customers', customerData)
+                 await axios.post('https://customer-management-backend-73do.onrender.com/api/customers', customerData)
             }
             this.props.history.push('/')
         } catch(e){
