@@ -5,15 +5,19 @@ const cors = require('cors')
 const path = require('path')
 
 const insertedData = require('./data')
-const { error } = require('console')
-const { get } = require('http')
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
-const dbPath = path.join(__dirname, "db", "customer_management.db")
+const dbPath =
+  process.env.NODE_ENV === "production"
+    ? path.join("/tmp", "customer_management.db")
+    : path.join(__dirname, "db", "customer_management.db")
+
 let db = null
+
+
 
 async function createTables(db) {
     await db.exec(`
@@ -47,9 +51,11 @@ const initializeDbAndServer = async() =>{
         await createTables(db);
 
         await insertedData(db);
+        
+        const PORT = process.env.PORT || 5000;
 
         app.listen(5000, () => {
-            console.log("Server is running at http://localhost:5000/")
+            console.log(`Server running at http://localhost:${PORT}/`);
         })
     } catch(e){
         console.log(`DB Error: ${e.message}`)
