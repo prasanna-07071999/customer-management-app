@@ -1,0 +1,49 @@
+
+.customer-form-page {
+  max-width: 90%;
+  margin: auto;
+  padding: 10px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  min-height: 80vh;
+}
+
+.customer-add-delete {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #222222;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-size: 18px;
+  color: #555ddd;
+}
+
+@media (min-width: 668px) {
+  .customer-form-page {
+    max-width: 600px;
+  }
+
+  .customer-add-delete {
+    font-size: 32px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .customer-form-page {
+    max-width: 700px;
+  }
+
+  .customer-add-delete {
+    font-size: 36px;
+  }
+}
+
+

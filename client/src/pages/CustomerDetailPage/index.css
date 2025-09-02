@@ -1,0 +1,141 @@
+.customer-detail-page {
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  box-sizing: border-box;
+  color: #1e293b;
+}
+
+.name-heading {
+  margin-right: 8px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.firstname {
+  color: #2563eb; 
+  margin-right: 6px;
+}
+
+.lastname {
+  color: #4b5563; 
+  margin-right: 6px;
+}
+
+.phone-number {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #334155;
+}
+
+.phone-heading {
+  font-weight: 700;
+  margin-right: 8px;
+  color: #1e293b;
+}
+
+
+.edit-customer-button {
+  background-color: #3b82f6;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  height: 50px;
+  width: 200px;
+}
+
+
+.delete-customer-button {
+  background-color: #ef4444;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  height: 50px;
+  width: 200px;
+}
+
+
+.back-text {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  color: #3b82f6;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  font-size: 20px;
+  color: #64748b;
+}
+
+@media (min-width: 668px) {
+  .customer-detail-page {
+    padding: 30px;
+  }
+
+  .phone-number {
+    font-size: 20px;
+  }
+
+  .edit-customer-button{
+    font-size: 17px;
+    padding: 20px;
+  }
+  .delete-customer-button {
+    font-size: 18px;
+    padding:  20px;
+  }
+
+  .addresses-heading {
+    font-size: 28px;
+  }
+
+  .back-text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .customer-detail-page {
+    padding: 0px;
+  }
+
+  .phone-number {
+    font-size: 22px;
+  }
+
+  .edit-button{
+    font-size: 21px;
+    padding: 24px;
+  }
+  .delete-button {
+    font-size: 20px;
+    padding: 23px;
+  }
+
+  .addresses-heading {
+    font-size: 32px;
+  }
+
+  .back-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

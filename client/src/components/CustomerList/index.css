@@ -1,0 +1,71 @@
+.customer-list {
+  list-style-type: none;
+  padding: 0px;
+  margin: 10px;
+  font-family: sans-serif;
+
+}
+
+.customer-list-item {
+  padding: 15px;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: #fafafa;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.customer-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222111;
+}
+
+.customer-phone {
+  font-size: 14px;
+  color: #555ddd;
+}
+
+.customer-details-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+@media screen and (min-width: 668px) {
+  .customer-list-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .customer-name {
+    font-size: 18px;
+  }
+
+  .customer-phone {
+    font-size: 16px;
+  }
+
+  .customer-details-link {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .customer-list-item {
+    padding: 25px;
+  }
+
+  .customer-name {
+    font-size: 20px;
+  }
+
+  .customer-phone {
+    font-size: 18px;
+  }
+}

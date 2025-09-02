@@ -1,0 +1,56 @@
+### Get all customers
+GET http://localhost:5000/api/customers
+
+### Create a new customer
+POST http://localhost:5000/api/customers
+Content-Type: application/json
+
+{
+  "first_name": "Sunil",
+  "last_name": "Abbavarapu",
+  "phone_number": "7894561230"
+}
+
+### Get a single customer by ID
+GET http://localhost:5000/api/customers/2
+
+### Update a customer by ID
+PUT http://localhost:5000/api/customers/1
+Content-Type: application/json
+
+{
+  "first_name": "John",
+  "last_name": "Smith",
+  "phone_number": "9787654321"
+}
+
+### Delete a customer by ID
+DELETE http://localhost:5000/api/customers/1
+
+### Add an address for customer ID 2
+POST http://localhost:5000/api/customers/2/addresses
+Content-Type: application/json
+
+{
+  "address_details": "1-233 Rajiv Nagar Street",
+  "city": "Vizag",
+  "state": "Andhra Pradesh",
+  "pin_code": "530001"
+}
+
+### Get all addresses for customer ID 2
+GET http://localhost:5000/api/customers/2/addresses
+
+### Update an address by address ID 1
+PUT http://localhost:5000/api/addresses/47
+Content-Type: application/json
+
+{
+  "address_details": "4-56 Kottavalasa Street",
+  "city": "Rajamahendravaram",
+  "state": "Andhra Prasesh",
+  "pin_code": "533101"
+}
+
+### Delete an address by address ID 2
+DELETE http://localhost:5000/api/addresses/47
