@@ -2,7 +2,6 @@ import {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import CustomerList from '../../components/CustomerList'
-import CustomerDetailPage from './path-to/CustomerDetailPage'
 import './index.css';
 
 class CustomerListPage extends Component {
@@ -18,14 +17,8 @@ class CustomerListPage extends Component {
 
   componentDidMount() {
     this.fetchCustomers();
-    const { state } = this.props.location;
-    if (state && state.deletedId) {
-      this.setState(prevState => ({
-        customers: prevState.customers.filter(customer => customer.id !== state.deletedId)
-      }));
-      this.props.history.replace({ ...this.props.location, state: {} });
-    }
   }
+  
   fetchCustomers = async () => {
     this.setState({ isLoading: true, error: null });
     try {
