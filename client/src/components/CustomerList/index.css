@@ -3,7 +3,7 @@
   padding: 0px;
   margin: 10px;
   font-family: sans-serif;
-
+  margin-left: 50px;
 }
 
 .customer-list-item {
@@ -59,6 +59,7 @@
 @media (min-width: 992px) {
   .customer-list-item {
     padding: 25px;
+    margin-left: 0px;
   }
 
   .customer-name {

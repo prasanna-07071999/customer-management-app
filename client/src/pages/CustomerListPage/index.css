@@ -1,5 +1,4 @@
 .customer-list-page {
-  margin: auto;
   font-family: sans-serif;
   width: 1400px;
 }
@@ -8,16 +7,18 @@
   justify-content: column;
   margin-bottom: 10px;
   gap: 10px;
+  margin-left: 150px;
 }
 .heading{
   text-align: center;
 }
 .filter-select{
-  width: 100%;
+  width: 400px;
   border: 1px solid #444145;
   border-radius: 5px;
   box-sizing: border-box;
   height: 40px;
+  margin-left: 150px;
 }
 
 .add-customer-button {
@@ -46,7 +47,7 @@
 }
 
 .search-input{
-  width: 100%;
+  width: 400px;
   margin-left: 50px;
   height: 35px;
   padding: 5px;
@@ -62,6 +63,8 @@
 @media screen and (min-width: 668px) {
   .customer-list-page {
     max-width: 700px;
+    width: 100%;
+    margin: auto;
   }
   .search-filter {
     flex-direction: row;
@@ -88,11 +91,19 @@
 
 @media screen and (min-width: 992px) {
   .customer-list-page {
-    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    margin-left: 350px;
   }
 
   .pagination-container {
     right: 400px;
+  }
+  .search-input{
+    margin-left: 0px;
+  }
+  .search-filter{
+    margin-left: 50px;
   }
 }
 
